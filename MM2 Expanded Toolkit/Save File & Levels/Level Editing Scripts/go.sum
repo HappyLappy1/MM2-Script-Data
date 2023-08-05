@@ -1,0 +1,4 @@
+github.com/aead/cmac v0.0.0-20160719120800-7af84192f0b1 h1:+JkXLHME8vLJafGhOH4aoV2Iu8bR55nU6iKMVfYVLjY=
+github.com/aead/cmac v0.0.0-20160719120800-7af84192f0b1/go.mod h1:nuudZmJhzWtx2212z+pkuy7B6nkBqa+xwNXZHL1j8cg=
+honnef.co/go/spew v0.0.0-20160306144918-6a474d848f64 h1:QXUWVvBP391pmUl/I2Ossys8UOwM+eYWWIj6KUHvYvE=
+honnef.co/go/spew v0.0.0-20160306144918-6a474d848f64/go.mod h1:5L/6ZCxDr8VMMVdcdBZpNEfld7k4vCPzjGllicTqlxI=
