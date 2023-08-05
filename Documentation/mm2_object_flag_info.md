@@ -1316,6 +1316,7 @@ Note: Winged Blocks are VERY different to normal blocks, and their behavior has 
 | 0x40000000| Unused      |
 | 0x80000000| Unused      |
 
+0x1000: Will unstack itself if any action is taken in the editor. 
 0x10000, 0x20000: Lakitu spits out spinies in both cloud types. I expected that to be the difference, but evidently that isn't it. 0x10000 is the one used in-game.
 
 ### [31] Lakitu Cloud
@@ -1908,7 +1909,8 @@ Generates Phantom Ground tiles beneath it all the way down.
 
 0x4, 0x1000: Unused for Yoshi
 0x2000: Boot is medium sized while goomba is inside, but becomes small after killed. Yoshi egg is medium sized, but hatches into a normal Yoshi. 
-0x4000: Red Yoshi Egg. 
+0x4000: Red Yoshi Egg.
+
 ### [46] Dry Bones 
 | Flag      | Description |
 |-----------|-------------|
@@ -2090,6 +2092,7 @@ Probably Always has 0x6000000 and 0x40, or it might be corrupt. Castle Flagpoles
 Referred to as "Jumping Machine" in Toost. Technically true lmao. 
 Tested in 3DW to prevent crashes. Clouds despawn in 3DW
 0x200: Works perfectly fine, kinda. Mario will become locked in place if he attempts to bounce on any hop-chop inside a clowncar. 
+0x1000: Works as expected, kinda. De-stacks if anything is touched, bouncing on it locks mario in place if not the bottom enemy in the stack.
 
 ### [51] Skipsqueak
 | Flag      | Description |
@@ -2130,7 +2133,7 @@ Tested in 3DW to prevent crashes. Clouds despawn in 3DW
 | 0x80000000| Unused      |
 
 Tested in 3DW to prevent crashes. Clouds despawn in 3DW
-
+0x1000: Works as expected, but de-stacks if anything is touched. 
 
 ### [52] Wiggler
 | Flag      | Description |
@@ -2329,7 +2332,7 @@ Temporary doors (such as those from pipes, crates, blocks, etc.) will spit the p
 | 0x200     | In Clowncar |
 | 0x400     | On a Track  |
 | 0x800     | Unused      |
-| 0x1000    | In Stack    |
+| 0x1000    | Unused      |
 | 0x2000    | Medium      |
 | 0x4000    | Big         |
 | 0x8000    | Parachute   |
@@ -2502,7 +2505,7 @@ As I suspected, a save + reload caused the tracks to put themselves in as their 
 | 0x200     | In Clowncar |
 | 0x400     | On a Track  |
 | 0x800     | Unused      |
-| 0x1000    | In Stack    |
+| 0x1000    | Unused      |
 | 0x2000    | Medium      |
 | 0x4000    | Big         |
 | 0x8000    | Parachute   |
@@ -3125,7 +3128,7 @@ Medium Spike Balls roll as if they were normal sized.
 | 0x200     | In Clowncar |
 | 0x400     | On a Track  |
 | 0x800     | Unused      |
-| 0x1000    | In Stack    |
+| 0x1000    | Unused      |
 | 0x2000    | Medium      |
 | 0x4000    | Big         |
 | 0x8000    | Parachute   |
@@ -3253,7 +3256,7 @@ Note: Hard to test because of low boom-boom cap. May be incomplete or blatantly 
 | 0x200     | In Clowncar |
 | 0x400     | On a Track  |
 | 0x800     | Unused      |
-| 0x1000    | In Stack    |
+| 0x1000    | Unused      |
 | 0x2000    | Medium      |
 | 0x4000    | Big         |
 | 0x8000    | Parachute   |
@@ -4006,8 +4009,9 @@ You would also need to edit the width/height to make collision match sprite, but
 | 0x20000000| Unused      |
 | 0x40000000| Unused      |
 | 0x80000000| Unused      |
-
+0x1000: Works as expected. 
 Note: Crashes outside 3DW
+
 ### [97] Warp Box
 | Flag      | Description |
 |-----------|-------------|
@@ -4242,7 +4246,7 @@ All of the info it handles takes place in the map section of the level file anyw
 | 0x200     | In Clowncar |
 | 0x400     | On a Track  |
 | 0x800     | Unused      |
-| 0x1000    | In Stack    |
+| 0x1000    | Unused      |
 | 0x2000    | Medium      |
 | 0x4000    | Big         |
 | 0x8000    | Parachuting |
@@ -4283,7 +4287,7 @@ All of the info it handles takes place in the map section of the level file anyw
 | 0x200     | Unused      |
 | 0x400     | Unused      |
 | 0x800     | Unused      |
-| 0x1000    | In Stack    |
+| 0x1000    | Unused      |
 | 0x2000    | "Medium"    |
 | 0x4000    | "Big"       |
 | 0x8000    | Unused      |
@@ -4811,7 +4815,7 @@ Note: Despawns outside of 3DW. would theoretically work inside a CP in new Soup,
 | 0x200     | In Clowncar |
 | 0x400     | On a Track  |
 | 0x800     | Unused      |
-| 0x1000    | In Stack    |
+| 0x1000    | Unused      |
 | 0x2000    | Medium      |
 | 0x4000    | Big         |
 | 0x8000    | Parachute   |
@@ -4853,7 +4857,7 @@ Note: Despawns outside of 3DW. would theoretically work inside a CP in new Soup,
 | 0x200     | In Clowncar |
 | 0x400     | On a Track  |
 | 0x800     | Unused      |
-| 0x1000    | In Stack    |
+| 0x1000    | Unused      |
 | 0x2000    | Unused      |
 | 0x4000    | "Big"       |
 | 0x8000    | Parachute   |
