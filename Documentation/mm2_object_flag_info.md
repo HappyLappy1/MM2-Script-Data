@@ -3,7 +3,42 @@
 
 ## Flags for objects
 
-## VERY INCOMPLETE
+### General Structure 
+| Flag      | Description | Extended Description  |
+|-----------|-------------|--------------------------------------|
+| 0x1       | In Pipe     | Object thinks it's in a pipe |
+| 0x2       | Wings       | Object thinks it has wings | 
+| 0x4       | Alt Form 2/2| One of the places an object can store an alternate form. Typically used for Binary alt-forms (like goombas and goombrats) |
+| 0x8       | Direction A1| One of the places an object can store an alternate form/direction. May be a bitfield with 0x4 and/or 0x10. (like Thwomp Direction)|
+| 0x10      | Direction A2| One of the places an object can store an alternate form/direction. May be a bitfield with 0x4 and/or 0x8. (like Thwomp Direction)|
+| 0x20      | Face Left / Pipe Left  | Bitfield with 0x40. One of the places to store object direction, or to store direction of pipe for editor sprite. A goomba in a sideways pipe appears sideways because this flag is set. |
+| 0x40      | Face Left / Pipe Up / Always | Bitfield with 0x40. One of the places to store object direction, or to store direction of pipe for editor sprite. All objects, even those not in pipes or unable to enter them, will have 0x40 by default. |
+| 0x80      | Is Container/Has Contents| Used by Pipes/Clowncars/Clouds/Claws to detect if something has been placed inside. "Is Container" is used on objects that don't have this flag normally, while "Has Contents" is used on objects that can. If "Unused", this flag does not affect the object|
+| 0x100     | Stretch | Only boos make use of this flag, and it detects whether the boo is a stretch. Weird, huh? |
+| 0x200     | In Clowncar | Object thinks it's in a clowncar |
+| 0x400     | On a Track  | Object thinks it's on tracks |
+| 0x800     | Unused      | Unused globally |
+| 0x1000    | In Stack    | Object thinks it's in a stack |
+| 0x2000    | Medium      | Medium Sized enemies are a brand new discovery. Generally 1.5x in size, and have behavior consistent with their small counterparts |
+| 0x4000    | Big / 2x2   | Object believes it has ingested a mushroom, and grown to 2x in size. Many blocks react to this by becoming a 2x2 grid of themselves|
+| 0x8000    | Parachute   | Object believes it has a parachute|
+| 0x10000   | In Cloud    | Object believes it is in a cloud. This is the one the game always uses|
+| 0x20000   | In Cloud(?) | Object ALSO believes it is in a cloud. Could be a bitfield, or a duplicate flag|
+| 0x40000   | Alt Form 2/3| One of the places an object can store an alternate form. Typically used for Trinary alt-forms (like 10/30/50 coin type). | 
+| 0x80000   | Alt Form 2/3| One of the places an object can store an alternate form. Typically used for Trinary alt-forms (like 10/30/50 coin type). |
+| 0x100000  | Left Tracks / Begin Entry Index | If the object is on tracks, it would travel to the left on those tracks; is a bitfield with 0x200000. If a door, warp box, or pipe, this is a bitfield of variable size that pairs doors/warp-boxes/pipes| 
+| 0x200000  | Vert Tracks / Cont. Entry Index | If the object is on tracks, it is travelling vertically on those tracks; Is a bitfield with 0x200000. If a door, warp box, or pipe, this is a bitfield of variable size that pairs doors/warp-boxes/pipes| 
+| 0x400000  | Alt Form 1/N / Cont. Entry Index | Beginning of a bitfield of variable size for storing alt-forms of objects with many of them (such as arrows with 8 unique directions). If a door, warp box, or pipe, this is a bitfield of variable size that pairs doors/warp-boxes/pipes. |
+| 0x800000  | Alt Form 3/N / Cont. Entry Index | A bitfield of variable size for storing alt-forms of objects with many of them (such as arrows with 8 unique directions). If a door, warp box, or pipe, this is a bitfield of variable size that pairs doors/warp-boxes/pipes. |
+| 0x1000000 | Alt Form 5/N / Cont. Entry Index | of a bitfield of variable size for storing alt-forms of objects with many of them (such as arrows with 8 unique directions). If a warp pipe, this is a bitfield of variable size that pairs warp pipes. |
+| 0x2000000 | L-Wall Hang | Object is hanging from the left wall. Bitfield with 0x4000000 | 
+| 0x4000000 | Roof Hang   | Object is hanging from the ceiling. Bitfield with 0x2000000 |  
+| 0x6000000 | Ground Hang/Always| All objects have this flag, unless they are capable of clinging to a wall or hanging from a ceiling, and are currently doing so. |  
+| 0x8000000 | In Claw     | Object believes its' in a claw. For some objects, this means moving up half a tile and no other behavioral change. |
+| 0x10000000| Unused      | Unused Globally |
+| 0x20000000| Unused      | Unused Globally |
+| 0x40000000| Unused      | Unused Globally |
+| 0x80000000| Unused      | Unused Globally |
 
 ### [0] Goomba/Goombrat/Galoomba/Galoombud
 | Flag      | Description |
