@@ -594,12 +594,14 @@ func main() {
 	tbl := table.New("Index", 
 	"X-Pos", 
 	"Y-Pos",
+	"Id",
 	"Background_Id")
 	tbl.WithHeaderFormatter(headerFmt).WithFirstColumnFormatter(columnFmt)
     for i := 0; i < int(level.OverWorld.GroundCount); i++ {
 		tbl.AddRow(i, 
 		level.OverWorld.Ground[i].X, 
 		level.OverWorld.Ground[i].Y,
+		level.OverWorld.Ground[i].Id,
 		level.OverWorld.Ground[i].BackgroundId)
 		}
 	tbl.Print()
@@ -607,12 +609,14 @@ func main() {
 	tbl = table.New("Index", 
 	"X-Pos", 
 	"Y-Pos",
+	"Id",
 	"Background_Id")
 	tbl.WithHeaderFormatter(headerFmt).WithFirstColumnFormatter(columnFmt)
     for i := 0; i < int(level.SubWorld.GroundCount); i++ {
 		tbl.AddRow(i, 
 		level.SubWorld.Ground[i].X, 
 		level.SubWorld.Ground[i].Y,
+		level.SubWorld.Ground[i].Id,
 		level.SubWorld.Ground[i].BackgroundId)
 		}
     tbl.Print()	
