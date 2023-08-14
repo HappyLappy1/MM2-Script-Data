@@ -615,9 +615,9 @@ Note: one-tile lifts are funky, and are hard to differentiate.
 |-----------|-------------|
 | 0x1       | Unused      |
 | 0x2       | Wings       |
-| 0x4       | Unused      |
-| 0x8       | Crush Down  |
-| 0x10      | Crush Right |
+| 0x4       | Red Blaster |
+| 0x8       | Unused      |
+| 0x10      | Unused      |
 | 0x20      | Pipe Left   |
 | 0x40      | Pipe Up     |
 | 0x60      | Pipe Down   |
@@ -647,7 +647,6 @@ Note: one-tile lifts are funky, and are hard to differentiate.
 | 0x20000000| Unused      |
 | 0x40000000| Unused      |
 | 0x80000000| Unused      |
-
 0x1: The blaster is evidently in a pipe, but does not exit it under any circumstances: Unfortunate.
 0x2: The blaster sprouts wings, and chases mario down like a winged goomba. It still has bill blaster collision, and is only capable of crushing Mario, but it will never fire.
 0x20, 0x40, 0x60: These work, and are a joy to see.
