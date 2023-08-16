@@ -3682,8 +3682,8 @@ Note: Track Blocks REALLY do not like to exist without track block nodes. Lots o
 | 0x20000   | Unused      |
 | 0x40000   | Unused      |
 | 0x80000   | Unused      |
-| 0x100000  | Unused      |
-| 0x200000  | Unused      |
+| 0x100000  | Down-Hill   |
+| 0x200000  | Left-Facing |
 | 0x800000  | Unused      |
 | 0x400000  | Unused      |
 | 0x1000000 | Unused      |
@@ -3699,6 +3699,8 @@ Note: Track Blocks REALLY do not like to exist without track block nodes. Lots o
 Note: 1x1 slopes all look identical. Hard to test, and hard to reverse test due to slopes saving as the ground data type.
 0x20, 0x40, 0x60: messes with slope collision & sprites in glitchy ways. 
 0x2000, 0x4000: Medium offset half a tile, Big is 4x6.
+0x100000, 0x200000: Bitfield for direction of the slope. 
+     0x0 for Down + Left, 0x100000 for Down + Right, 0x200000 for Up + Left, and 0x300000 for Down + Left
 
 ### [88] Steep Slope 
 | Flag      | Description |
@@ -3724,8 +3726,8 @@ Note: 1x1 slopes all look identical. Hard to test, and hard to reverse test due 
 | 0x20000   | Unused      |
 | 0x40000   | Unused      |
 | 0x80000   | Unused      |
-| 0x100000  | Unused      |
-| 0x200000  | Unused      |
+| 0x100000  | Down-Hill   |
+| 0x200000  | Left-Facing |
 | 0x800000  | Unused      |
 | 0x400000  | Unused      |
 | 0x1000000 | Unused      |
@@ -3741,6 +3743,9 @@ Note: 1x1 slopes all look identical. Hard to test, and hard to reverse test due 
 Note: 1x1 slopes all look identical. Hard to test, and hard to reverse test due to slopes saving as the ground data type.
 0x20, 0x40, 0x60: messes with slope collision & sprites in glitchy ways. 
 0x2000, 0x4000: Medium offset half a tile, Big is 4x5.
+0x100000, 0x200000: Bitfield for direction of the slope. 
+     0x0 for Down + Left, 0x100000 for Down + Right, 0x200000 for Up + Left, and 0x300000 for Down + Left
+
 
 ### [89] Custom Autoscroll Bird
 | Flag      | Description |
@@ -3942,8 +3947,8 @@ That said, the interesting stuff that can be done with clear pipes is inside the
 | 0x20000   | Unused      |
 | 0x40000   | Fast Speed  |
 | 0x80000   | Unused      |
-| 0x100000  | Unused      |
-| 0x200000  | Unused      |
+| 0x100000  | Down-Hill   |
+| 0x200000  | Left-Facing |
 | 0x400000  | On/Off      |
 | 0x800000  | Unused      |
 | 0x1000000 | Unused      |
@@ -3963,6 +3968,8 @@ That said, the interesting stuff that can be done with clear pipes is inside the
 You would also need to edit the width/height to make collision match sprite, but neat af.
 0x2000, 0x4000: Medium is only offset, Big is 6x2 for some reason. 
 0x40000: This makes the conveyor belt spin at a faster speed. 
+0x100000, 0x200000: Bitfield for direction of the conveyor belt slope. 
+     0x0 for Down + Left, 0x100000 for Down + Right, 0x200000 for Up + Left, and 0x300000 for Down + Left
 0x400000: Makes conveyor belt switch directions after an on/off switch is triggered.
 
 ### [95] Key  
