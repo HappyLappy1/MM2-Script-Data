@@ -482,7 +482,7 @@ Note: I only conducted this test on 1x1 Pipes, which may have glitchy behavior.
 0x4000: Pipe is 3x3, though the sprite looks like several pipes got overlapped. Functions fine.
 0x40000, 0x80000, 0xC0000: Green if unset. 
 0x100000 to 0xF00000: Sends the player to the oldest pipe with the same "entry flag" in the subworld, if one exists. Softlocks otherwise. 
-The Pipe limit of ten could be arbitrary, with #11-15 being valid. 
+The Pipe limit of ten could be arbitrary, with #11-15 being valid. Update: Pipe pairs 11-15 work, but only in editor. Pipe is simply unenterable when playing the level, but you can drag the player through the pipe while in editor mode. 
 
 ### [10] Spring  
 | Flag      | Description |
