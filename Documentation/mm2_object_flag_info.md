@@ -295,6 +295,7 @@ Note: Winged Blocks are VERY different to normal blocks, and their behavior has 
 
 Note: Winged Blocks are VERY different to normal blocks, and their behavior has been tested independently. 
 0x1: No wings = empty pipe
+0x6: This causes the block to spawn pre-hit. Only seems to work while winged. The contents will not be expelled, and it is corrupt. (Credit to Shino, I missed this in my testing) 
 0x20, 0x40, 0x60: Wings rotate in editor, but not while playing.
 0x80: Causes block to despawn if winged. This flag is typically used on pipes, claws, clowncars, and clouds to signify "some other object is riding/inside me".
 0x4000: 1x1 if winged. Objects inside (CId) can be released from all four blocks. The individual blocks act like their own blocks. 
