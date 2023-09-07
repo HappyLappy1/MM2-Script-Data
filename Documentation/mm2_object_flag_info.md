@@ -3515,7 +3515,7 @@ Snow Pokeys drop snowballs of expected sizes. While I forgot to test those for s
 | 0x200000  | Unused      |
 | 0x400000  | Face Left   |
 | 0x800000  | Face Up     |
-| 0xC00000  | Face Down   |
+| 0xC00000  | Face Right  |
 | 0x1000000 | Unused      |
 | 0x2000000 | Unused      |
 | 0x4000000 | Unused      |
@@ -3526,7 +3526,7 @@ Snow Pokeys drop snowballs of expected sizes. While I forgot to test those for s
 | 0x40000000| Unused      |
 | 0x80000000| Unused      |
 
-0x400000, 0x800000: Bitfield for Skewer direction (identical to Thwomp bitfield).
+0x400000, 0x800000: Bitfield for Skewer direction.
 0x8000000: Up half a tile. 
 
 ### [84] Snake Block 
