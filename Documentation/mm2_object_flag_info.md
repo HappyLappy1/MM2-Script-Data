@@ -576,8 +576,9 @@ Note: one-tile lifts are funky, and are hard to differentiate.
 | 0x1       | Unused      |
 | 0x2       | Wings       |
 | 0x4       | Unused      |
-| 0x8       | Crush Down  |
+| 0x8       | Crush Up(?) |
 | 0x10      | Crush Right |
+| 0x18      | Crush Down  |
 | 0x20      | Pipe Left   |
 | 0x40      | Pipe Up     |
 | 0x60      | Pipe Down   |
