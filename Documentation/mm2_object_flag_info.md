@@ -1421,9 +1421,10 @@ Note: Winged Blocks are VERY different to normal blocks, and their behavior has 
 | 0x80000   | Unused      |
 | 0x100000  | Left Tracks |
 | 0x200000  | Vert Tracks |
-| 0x800000  | Unused      |
-| 0x400000  | Unused      |
-| 0x1000000 | Unused      |
+| 0x400000  | Face Up     |
+| 0x800000  | Face Right  |
+| 0xC00000  | Face Down   |
+| 0x1000000 | Face Forward|
 | 0x2000000 | Unused      |
 | 0x4000000 | Unused      |
 | 0x6000000 | Always      |
