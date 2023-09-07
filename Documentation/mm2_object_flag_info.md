@@ -2890,7 +2890,7 @@ Causes the editor to assign it some funky labels, like "enterable pipe", "diagon
 | 0x80      | Is Container|
 | 0x100     | Unused      |
 | 0x200     | Unused      |
-| 0x400     | Unused      |
+| 0x400     | On Track    |
 | 0x800     | Unused      |
 | 0x1000    | Unused      |
 | 0x2000    | "Medium"    |
